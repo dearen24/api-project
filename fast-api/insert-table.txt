@@ -1,0 +1,140 @@
+-- MySQL Dummy Data Insert Script
+-- Make sure to run this after creating your tables
+
+-- Insert Users
+INSERT INTO users (username, email, password_hash, first_name, last_name, is_active, created_at, updated_at) VALUES
+('johndoe', 'john.doe@example.com', '$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/lewdBWl9hJr.9f1rm', 'John', 'Doe', TRUE, NOW(), NOW()),
+('jansmith', 'jane.smith@example.com', '$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/lewdBWl9hJr.9f1rm', 'Jane', 'Smith', TRUE, NOW(), NOW()),
+('mikejohnson', 'mike.johnson@example.com', '$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/lewdBWl9hJr.9f1rm', 'Mike', 'Johnson', TRUE, NOW(), NOW()),
+('sarahwilson', 'sarah.wilson@example.com', '$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/lewdBWl9hJr.9f1rm', 'Sarah', 'Wilson', TRUE, NOW(), NOW()),
+('alexbrown', 'alex.brown@example.com', '$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/lewdBWl9hJr.9f1rm', 'Alex', 'Brown', FALSE, NOW(), NOW()),
+('emilydavis', 'emily.davis@example.com', '$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/lewdBWl9hJr.9f1rm', 'Emily', 'Davis', TRUE, NOW(), NOW()),
+('davidlee', 'david.lee@example.com', '$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/lewdBWl9hJr.9f1rm', 'David', 'Lee', TRUE, NOW(), NOW()),
+('lisagarcia', 'lisa.garcia@example.com', '$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/lewdBWl9hJr.9f1rm', 'Lisa', 'Garcia', TRUE, NOW(), NOW()),
+('tomanderson', 'tom.anderson@example.com', '$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/lewdBWl9hJr.9f1rm', 'Tom', 'Anderson', TRUE, NOW(), NOW()),
+('marialopez', 'maria.lopez@example.com', '$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/lewdBWl9hJr.9f1rm', 'Maria', 'Lopez', TRUE, NOW(), NOW());
+
+-- Insert Categories
+INSERT INTO categories (name, description, color, created_at) VALUES
+('Technology', 'Posts about technology, programming, and software development', '#3498db', NOW()),
+('Travel', 'Travel experiences, tips, and destination guides', '#e74c3c', NOW()),
+('Food & Cooking', 'Recipes, cooking tips, and food reviews', '#f39c12', NOW()),
+('Health & Fitness', 'Health tips, workout routines, and wellness advice', '#2ecc71', NOW()),
+('Business', 'Business insights, entrepreneurship, and career advice', '#9b59b6', NOW()),
+('Lifestyle', 'Lifestyle tips, personal development, and life hacks', '#1abc9c', NOW()),
+('Education', 'Learning resources, tutorials, and educational content', '#34495e', NOW()),
+('Entertainment', 'Movies, books, games, and entertainment reviews', '#e67e22', NOW());
+
+-- Insert Tags
+INSERT INTO tags (name, slug, created_at) VALUES
+('Python', 'python', NOW()),
+('JavaScript', 'javascript', NOW()),
+('Web Development', 'web-development', NOW()),
+('Machine Learning', 'machine-learning', NOW()),
+('Travel Tips', 'travel-tips', NOW()),
+('Photography', 'photography', NOW()),
+('Recipe', 'recipe', NOW()),
+('Healthy Living', 'healthy-living', NOW()),
+('Startup', 'startup', NOW()),
+('Marketing', 'marketing', NOW()),
+('Productivity', 'productivity', NOW()),
+('Tutorial', 'tutorial', NOW()),
+('Review', 'review', NOW()),
+('Guide', 'guide', NOW()),
+('Tips', 'tips', NOW());
+
+-- Insert Posts
+INSERT INTO posts (title, content, excerpt, author_id, category_id, status, view_count, is_featured, published_at, created_at, updated_at) VALUES
+('Getting Started with Python Web Development', 'Python is an excellent choice for web development. In this comprehensive guide, we will explore Flask and Django frameworks, their differences, and when to use each one. We will also cover best practices for building scalable web applications...', 'A comprehensive guide to Python web development frameworks and best practices.', 1, 1, 'published', 2543, TRUE, '2024-07-15 10:30:00', NOW(), NOW()),
+
+('10 Hidden Gems in Southeast Asia', 'Southeast Asia is full of incredible destinations that most tourists never discover. From secret beaches in Thailand to hidden temples in Cambodia, this guide reveals 10 amazing places that should be on every traveler''s bucket list...', 'Discover 10 incredible hidden destinations in Southeast Asia that most tourists miss.', 2, 2, 'published', 1876, TRUE, '2024-07-20 14:15:00', NOW(), NOW()),
+
+('The Ultimate Guide to Mediterranean Cooking', 'Mediterranean cuisine is not only delicious but also incredibly healthy. This guide covers the essential ingredients, cooking techniques, and traditional recipes from Greece, Italy, Spain, and other Mediterranean countries...', 'Learn the secrets of Mediterranean cooking with traditional recipes and techniques.', 3, 3, 'published', 987, FALSE, '2024-07-18 09:45:00', NOW(), NOW()),
+
+('Building Muscle: A Science-Based Approach', 'Building muscle effectively requires understanding the science behind muscle growth. This article covers progressive overload, proper nutrition, recovery strategies, and common mistakes to avoid in your fitness journey...', 'A science-based guide to building muscle effectively and safely.', 4, 4, 'published', 1432, FALSE, '2024-07-22 16:20:00', NOW(), NOW()),
+
+('Starting Your First Business: Lessons Learned', 'Starting a business is both exciting and challenging. After launching three successful startups, I want to share the most important lessons I''ve learned about entrepreneurship, funding, team building, and scaling...', 'Essential lessons for first-time entrepreneurs from a serial startup founder.', 6, 5, 'published', 3210, TRUE, '2024-07-10 11:00:00', NOW(), NOW()),
+
+('Minimalist Living: Less is More', 'Minimalism isn''t just about having fewer possessions; it''s about creating space for what truly matters. This article explores the philosophy of minimalist living and provides practical tips for decluttering your life...', 'Discover how minimalist living can improve your life and well-being.', 7, 6, 'published', 756, FALSE, '2024-07-25 13:30:00', NOW(), NOW()),
+
+('Machine Learning Fundamentals Explained', 'Machine learning can seem intimidating, but the core concepts are actually quite accessible. This tutorial breaks down supervised learning, unsupervised learning, and reinforcement learning with practical examples...', 'A beginner-friendly introduction to machine learning concepts and applications.', 1, 7, 'draft', 0, FALSE, NULL, NOW(), NOW()),
+
+('The Best Movies of 2024 So Far', '2024 has been an incredible year for cinema. From blockbuster superhero films to intimate indie dramas, this year has offered something for everyone. Here are my picks for the best movies released so far...', 'A comprehensive review of the best movies released in 2024.', 8, 8, 'published', 2156, FALSE, '2024-07-12 08:15:00', NOW(), NOW()),
+
+('Advanced JavaScript Patterns', 'Modern JavaScript development involves many advanced patterns and techniques. This deep dive covers closures, prototypes, async/await, modules, and design patterns that every JavaScript developer should know...', 'Master advanced JavaScript patterns and techniques for better code.', 9, 1, 'published', 1654, FALSE, '2024-07-17 15:45:00', NOW(), NOW()),
+
+('Budget Travel: Europe on $50 a Day', 'Traveling through Europe doesn''t have to break the bank. With careful planning and smart choices, you can explore amazing European cities on a budget of just $50 per day. Here''s how to do it...', 'Complete guide to budget travel in Europe with practical money-saving tips.', 2, 2, 'published', 2987, TRUE, '2024-07-08 12:20:00', NOW(), NOW()),
+
+('Homemade Pasta: Traditional Italian Techniques', 'Making pasta from scratch is one of life''s great pleasures. This guide teaches you traditional Italian techniques for making various types of pasta, from simple spaghetti to complex filled pastas...', 'Learn to make authentic Italian pasta from scratch with traditional techniques.', 10, 3, 'published', 1243, FALSE, '2024-07-14 10:30:00', NOW(), NOW()),
+
+('Mental Health and Remote Work', 'Remote work has many benefits, but it can also impact mental health. This article discusses strategies for maintaining good mental health while working from home, including work-life balance tips...', 'Essential tips for maintaining mental health while working remotely.', 4, 4, 'archived', 891, FALSE, '2024-06-15 14:00:00', NOW(), NOW());
+
+-- Insert Post-Tag relationships
+INSERT INTO post_tags (post_id, tag_id, created_at) VALUES
+(1, 1, NOW()), -- Python post -> Python tag
+(1, 3, NOW()), -- Python post -> Web Development tag
+(1, 12, NOW()), -- Python post -> Tutorial tag
+(2, 5, NOW()), -- Travel post -> Travel Tips tag
+(2, 6, NOW()), -- Travel post -> Photography tag
+(2, 14, NOW()), -- Travel post -> Guide tag
+(3, 7, NOW()), -- Cooking post -> Recipe tag
+(3, 14, NOW()), -- Cooking post -> Guide tag
+(4, 8, NOW()), -- Fitness post -> Healthy Living tag
+(4, 15, NOW()), -- Fitness post -> Tips tag
+(5, 9, NOW()), -- Business post -> Startup tag
+(5, 10, NOW()), -- Business post -> Marketing tag
+(6, 8, NOW()), -- Lifestyle post -> Healthy Living tag
+(6, 11, NOW()), -- Lifestyle post -> Productivity tag
+(7, 1, NOW()), -- ML post -> Python tag
+(7, 4, NOW()), -- ML post -> Machine Learning tag
+(7, 12, NOW()), -- ML post -> Tutorial tag
+(8, 13, NOW()), -- Movies post -> Review tag
+(9, 2, NOW()), -- JS post -> JavaScript tag
+(9, 3, NOW()), -- JS post -> Web Development tag
+(9, 12, NOW()), -- JS post -> Tutorial tag
+(10, 5, NOW()), -- Budget travel -> Travel Tips tag
+(10, 15, NOW()), -- Budget travel -> Tips tag
+(11, 7, NOW()), -- Pasta post -> Recipe tag
+(11, 12, NOW()), -- Pasta post -> Tutorial tag
+(12, 8, NOW()); -- Mental health -> Healthy Living tag
+
+-- Insert Comments
+INSERT INTO comments (post_id, user_id, content, parent_comment_id, is_approved, created_at, updated_at) VALUES
+(1, 2, 'Great tutorial! I''ve been looking for a comprehensive guide to Python web frameworks. The comparison between Flask and Django was particularly helpful.', NULL, TRUE, '2024-07-15 11:45:00', '2024-07-15 11:45:00'),
+(1, 3, 'Thanks for this! One question - which framework would you recommend for a beginner?', NULL, TRUE, '2024-07-15 12:30:00', '2024-07-15 12:30:00'),
+(1, 1, 'For beginners, I''d recommend starting with Flask as it''s simpler and more explicit. Once you''re comfortable, you can move to Django for larger projects.', 2, TRUE, '2024-07-15 13:15:00', '2024-07-15 13:15:00'),
+(2, 4, 'Amazing list! I''ve been to 3 of these places and they were incredible. Adding the rest to my travel bucket list.', NULL, TRUE, '2024-07-20 15:20:00', '2024-07-20 15:20:00'),
+(2, 6, 'The photos are stunning! How did you discover these hidden gems?', NULL, TRUE, '2024-07-20 16:45:00', '2024-07-20 16:45:00'),
+(2, 2, 'Lots of research and talking to locals! Sometimes the best places are the ones tourists haven''t discovered yet.', 5, TRUE, '2024-07-20 17:30:00', '2024-07-20 17:30:00'),
+(3, 7, 'I tried the pasta recipe and it turned out amazing! My family loved it.', NULL, TRUE, '2024-07-18 20:15:00', '2024-07-18 20:15:00'),
+(3, 8, 'Could you share more recipes from other Mediterranean countries?', NULL, TRUE, '2024-07-19 09:30:00', '2024-07-19 09:30:00'),
+(4, 9, 'This is exactly what I needed! I''ve been making some of the mistakes you mentioned. Time to fix my routine.', NULL, TRUE, '2024-07-22 18:45:00', '2024-07-22 18:45:00'),
+(5, 10, 'As someone who''s thinking about starting a business, this was incredibly insightful. Thank you for sharing your experience!', NULL, TRUE, '2024-07-10 12:30:00', '2024-07-10 12:30:00'),
+(5, 1, 'The point about team building really resonated with me. Hiring the right people is so crucial.', NULL, TRUE, '2024-07-10 14:15:00', '2024-07-10 14:15:00'),
+(8, 3, 'Great list! I''ve seen most of these movies and agree with your rankings. Can''t wait for your year-end list.', NULL, TRUE, '2024-07-12 10:30:00', '2024-07-12 10:30:00'),
+(9, 5, 'The section on closures was particularly well explained. I finally understand how they work!', NULL, TRUE, '2024-07-17 16:30:00', '2024-07-17 16:30:00'),
+(10, 7, 'This is so helpful! I''m planning a European trip and this will save me so much money.', NULL, TRUE, '2024-07-08 14:45:00', '2024-07-08 14:45:00'),
+(11, 9, 'Made this pasta last night and it was incredible! The technique for making the dough was spot on.', NULL, TRUE, '2024-07-14 19:20:00', '2024-07-14 19:20:00');
+
+-- Insert API Keys
+INSERT INTO api_keys (user_id, key_hash, name, permissions, rate_limit, is_active, expires_at, last_used_at, created_at) VALUES
+(1, '$2b$12$abcdef1234567890abcdef1234567890abcdef12', 'Main API Key', '{"read": true, "write": true, "delete": false}', 1000, TRUE, '2025-07-15 00:00:00', '2024-07-27 10:15:00', NOW()),
+(1, '$2b$12$fedcba0987654321fedcba0987654321fedcba09', 'Read Only Key', '{"read": true, "write": false, "delete": false}', 500, TRUE, '2025-07-15 00:00:00', '2024-07-26 15:30:00', NOW()),
+(2, '$2b$12$123456abcdef7890123456abcdef789012345678', 'Development Key', '{"read": true, "write": true, "delete": true}', 2000, TRUE, '2025-12-31 00:00:00', '2024-07-25 09:45:00', NOW()),
+(3, '$2b$12$7890123456abcdef7890123456abcdef78901234', 'Testing Key', '{"read": true, "write": false, "delete": false}', 100, FALSE, '2024-12-31 00:00:00', NULL, NOW()),
+(6, '$2b$12$456789abcdef0123456789abcdef012345678901', 'Production Key', '{"read": true, "write": true, "delete": false}', 5000, TRUE, '2026-01-01 00:00:00', '2024-07-27 14:20:00', NOW());
+
+-- Verify the data insertion
+SELECT 'Users' as table_name, COUNT(*) as record_count FROM users
+UNION ALL
+SELECT 'Categories', COUNT(*) FROM categories
+UNION ALL
+SELECT 'Tags', COUNT(*) FROM tags
+UNION ALL
+SELECT 'Posts', COUNT(*) FROM posts
+UNION ALL
+SELECT 'Post_Tags', COUNT(*) FROM post_tags
+UNION ALL
+SELECT 'Comments', COUNT(*) FROM comments
+UNION ALL
+SELECT 'API_Keys', COUNT(*) FROM api_keys;
