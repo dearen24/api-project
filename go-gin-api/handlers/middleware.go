@@ -3,12 +3,12 @@ package handlers
 import (
 	"net/http"
 	"strings"
-
+	"os"
 	"github.com/gin-gonic/gin"
 	"github.com/golang-jwt/jwt/v5"
 )
 
-var JwtSecret = []byte("supersecret")
+
 
 func AuthRequired() gin.HandlerFunc {
 	return func(c *gin.Context) {
@@ -18,7 +18,7 @@ func AuthRequired() gin.HandlerFunc {
 			c.Abort()
 			return
 		}
-
+		var JwtSecret = []byte(os.Getenv("JWT_SECRET"))
 		// Extract token
 		tokenString := strings.TrimPrefix(authHeader, "Bearer ")
 
