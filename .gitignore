@@ -2,3 +2,8 @@ express-api/node_modules
 __pycache__/
 *.pyc
 *.pyo
+**/migrations/
+*.png
+load_test.js
+.env
+package-lock.json
