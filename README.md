@@ -26,6 +26,8 @@ More may be added over time!
 - Schema and seed data are in:
   - `create-table.txt`
   - `insert-table.txt`
+ 
+Currently I only used 1 table for the API and also the testing. The other will be added soon!
 
 ---
 
