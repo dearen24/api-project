@@ -15,6 +15,7 @@ Currently implemented:
 - 🌐 [Express.js](https://expressjs.com/) (`express-api`)
 - 🥷 [NestJS](https://nestjs.com/) (`nest-api`)
 - 🐹 [Go Gin](https://gin-gonic.com/) (`go-gin-api`)
+- ☕ [Spring Boot](https://spring.io/projects/spring-boot) (`spring-boot-api`)
 
 More may be added over time!
 
