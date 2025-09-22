@@ -10,3 +10,7 @@ package-lock.json
 .env.example
 */dist
 */build
+spring-api/demo/target
+spring-api/demo/target/*
+!.mvn/wrapper/maven-wrapper.jar
+spring-api/demo/.mvn/wrapper/maven-wrapper.properties
